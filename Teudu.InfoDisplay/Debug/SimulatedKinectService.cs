@@ -13,7 +13,7 @@ namespace Teudu.InfoDisplay.Debug
         public void Initialize()
         {
             movementTimer = new System.Windows.Threading.DispatcherTimer();
-            movementTimer.Interval = new TimeSpan(70000);
+            movementTimer.Interval = new TimeSpan(1000000);
             movementTimer.Tick += new EventHandler(movementTimer_Tick);
 
             startTimer = new System.Windows.Threading.DispatcherTimer();
@@ -59,9 +59,9 @@ namespace Teudu.InfoDisplay.Debug
                 {
                     this.SkeletonUpdated(this, new SkeletonEventArgs()
                     {
-                        RightHandPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 1.6f, X = x, Y = (float)Math.Sin(Math.Log(x)) }.ScaleTo(1920, 1080, 0.4f, 0.4f),
+                        RightHandPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 1.0f, X = x, Y = (float)Math.Sin(Math.Log(x)) }.ScaleTo(1920, 1080, 0.4f, 0.4f),
                         LeftHandPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 3f, X = x, Y = (float)Math.Sin(Math.Log(x)) }.ScaleTo(1920, 1080, 0.4f, 0.4f),
-                        TorsoPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 4.0f, X = 0, Y = 0 }.ScaleTo(1920, 1080, 0.4f, 0.4f)
+                        TorsoPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 2.0f, X = 0, Y = 0 }.ScaleTo(1920, 1080, 0.4f, 0.4f)
                     });
                 }
             //}
@@ -86,9 +86,9 @@ namespace Teudu.InfoDisplay.Debug
             {
                 this.SkeletonUpdated(this, new SkeletonEventArgs()
                 {
-                    RightHandPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 1.6f, X = (float)Math.Sin(y), Y = y }.ScaleTo(1920, 1080, 0.4f, 0.4f),
+                    RightHandPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 1.0f, X = (float)(Math.Sin(y)), Y = y }.ScaleTo(1920, 1080, 0.1f, 0.1f),
                     LeftHandPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 3f, X = x, Y = (float)Math.Sin(Math.Log(x)) }.ScaleTo(1920, 1080, 0.4f, 0.4f),
-                    TorsoPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 4.0f, X = 0, Y = 0 }.ScaleTo(1920, 1080, 0.4f, 0.4f)
+                    TorsoPosition = new Microsoft.Kinect.SkeletonPoint() { Z = 2.0f, X = 0, Y = 0 }.ScaleTo(1920, 1080, 0.4f, 0.4f)
                 });
             }
 

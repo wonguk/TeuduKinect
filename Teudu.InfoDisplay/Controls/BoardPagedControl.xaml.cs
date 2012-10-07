@@ -62,7 +62,7 @@ namespace Teudu.InfoDisplay
             trackingResetTimer.Stop();
             ((ViewModel)this.DataContext).UpdateBrowse(-positionOffsets[boardMaster.Current], 0);
             ((ViewModel)this.DataContext).MaxBoardWidth = this.BoardContainer.ActualWidth;
-            ((ViewModel)this.DataContext).MaxBoardHeight = modelView[boardMaster.Current].ContentHeight;
+            ((ViewModel)this.DataContext).MaxBoardHeight = modelView[boardMaster.Current].ContentHeight*2;
             SetBindings();
             isShifting = false;
         }
@@ -93,7 +93,7 @@ namespace Teudu.InfoDisplay
         {
             double from = -positionOffsets[boardMaster.Next] + this.ActualWidth / 2 + boardInbetween;
             double to = -positionOffsets[boardMaster.Current];
-            ((ViewModel)this.DataContext).MaxBoardHeight = modelView[boardMaster.Current].ContentHeight;
+            ((ViewModel)this.DataContext).MaxBoardHeight = modelView[boardMaster.Current].ContentHeight*2;
             ShiftBoard(from, to);
         }
 
@@ -101,7 +101,7 @@ namespace Teudu.InfoDisplay
         {
             double from = -positionOffsets[boardMaster.Prev] - this.ActualWidth / 2 + boardInbetween;
             double to = -positionOffsets[boardMaster.Current];
-            ((ViewModel)this.DataContext).MaxBoardHeight = modelView[boardMaster.Current].ContentHeight;
+            ((ViewModel)this.DataContext).MaxBoardHeight = modelView[boardMaster.Current].ContentHeight*2;
             ShiftBoard(from, to);
         }
 
