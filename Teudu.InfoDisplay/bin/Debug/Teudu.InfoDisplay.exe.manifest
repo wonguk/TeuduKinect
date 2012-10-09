@@ -126,7 +126,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>YZ5ZHP/kn2DUA/gEa2+mGPKcrus=</dsig:DigestValue>
+        <dsig:DigestValue>jvvcGUesijyA4aqz99ICUCVMv0U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -607,13 +607,13 @@
       <dsig:DigestValue>Rhyq/hQY1xJT9jHfM6vO2oxAH84=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Teudu.InfoDisplay.exe.config" size="1540">
+  <file name="Teudu.InfoDisplay.exe.config" size="1560">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>CtVwmolp71jWco5wBH63FfLBdJQ=</dsig:DigestValue>
+      <dsig:DigestValue>RUY9V8Z8Mlrhr6ckg83JPJRmh3k=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

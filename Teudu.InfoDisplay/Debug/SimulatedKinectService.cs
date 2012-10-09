@@ -13,7 +13,7 @@ namespace Teudu.InfoDisplay.Debug
         public void Initialize()
         {
             movementTimer = new System.Windows.Threading.DispatcherTimer();
-            movementTimer.Interval = new TimeSpan(1000000);
+            movementTimer.Interval = new TimeSpan(700000);
             movementTimer.Tick += new EventHandler(movementTimer_Tick);
 
             startTimer = new System.Windows.Threading.DispatcherTimer();
