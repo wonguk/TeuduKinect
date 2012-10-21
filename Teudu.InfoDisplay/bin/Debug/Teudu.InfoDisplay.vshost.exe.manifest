@@ -119,14 +119,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Teudu.InfoDisplay.exe" size="14839808">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Teudu.InfoDisplay.exe" size="14838784">
       <assemblyIdentity name="Teudu.InfoDisplay" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>jvvcGUesijyA4aqz99ICUCVMv0U=</dsig:DigestValue>
+        <dsig:DigestValue>+w7lW9jwFhs8MuJ6cX/XJvZuxiY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -607,13 +607,13 @@
       <dsig:DigestValue>Rhyq/hQY1xJT9jHfM6vO2oxAH84=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Teudu.InfoDisplay.exe.config" size="1560">
+  <file name="Teudu.InfoDisplay.exe.config" size="1563">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>RUY9V8Z8Mlrhr6ckg83JPJRmh3k=</dsig:DigestValue>
+      <dsig:DigestValue>I4SJMRUxgwoB2vYIQZR/asbiBU4=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
