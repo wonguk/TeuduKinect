@@ -23,9 +23,11 @@ namespace Teudu.InfoDisplay
             }
 
             if (val)
+                //return new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 //return new SolidColorBrush(Color.FromRgb(16,12,68)); //161268 30 12 69 25 12 68
                 return new SolidColorBrush(Color.FromRgb(6, 4, 26));
             else
+                //return new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 return new SolidColorBrush(Color.FromRgb(6, 4, 26));//6 4 26
         }
 

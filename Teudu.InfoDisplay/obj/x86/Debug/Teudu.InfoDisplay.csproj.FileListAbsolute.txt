@@ -55,3 +55,4 @@ C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teudu
 C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teudu.InfoDisplay.application
 C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teudu.InfoDisplay.exe
 C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teudu.InfoDisplay.pdb
+C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Controls\style.baml

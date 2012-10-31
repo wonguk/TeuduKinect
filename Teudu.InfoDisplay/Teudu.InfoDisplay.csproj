@@ -268,6 +268,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TouchAssistControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -403,7 +407,9 @@
     <Resource Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Samples\events.xml" />
+    <Content Include="Samples\events.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Samples\image_stash\06_urinetown.png" />

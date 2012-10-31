@@ -6,56 +6,51 @@
              mc:Ignorable="d" 
              d:DesignHeight="240" d:DesignWidth="842">
     <UserControl.Resources>
-        <Storyboard x:Key="ShowAnimation" x:Name="ShowAnimation">
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetName="PopUpTransform"
-                Storyboard.TargetProperty="Y"
-                Duration="0:0:01">
-                <EasingDoubleKeyFrame KeyTime="0:0:01" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <!--<CircleEase EasingMode="EaseInOut"/>-->
-                        <ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="MainShowAnimation" x:Name="MainShowAnimation">
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetName="MessageContainer"
-                Storyboard.TargetProperty="Opacity"
-                Duration="0:0:01" Completed="MainShowAnimation_Completed">
-                <EasingDoubleKeyFrame KeyTime="0:0:01" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="MainHideAnimation" x:Name="MainHideAnimation">
-            <DoubleAnimationUsingKeyFrames
-                Storyboard.TargetName="MessageContainer"
-                Storyboard.TargetProperty="Opacity"
-                Duration="0:0:01" Completed="MainHideAnimation_Completed">
-                <EasingDoubleKeyFrame KeyTime="0:0:01" Value="0">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <CircleEase EasingMode="EaseInOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="Segoe WP"></Setter>
-            <Setter Property="FontSize" Value="30"></Setter>
-            <Setter Property="Foreground" Value="White"></Setter>
-        </Style>
-        <Style BasedOn="{StaticResource {x:Type TextBlock}}"
-               TargetType="TextBlock"
-               x:Key="MessageText">
-            <Setter Property="Typography.Capitals" Value="Titling"></Setter>
-            <Setter Property="FontFamily" Value="Segoe WP Bold"></Setter>
-            <Setter Property="Margin" Value="0,-10,0,0"></Setter>
-            <Setter Property="FontSize" Value="40"></Setter>
-        </Style>
+        <ResourceDictionary>
+            <Storyboard x:Key="ShowAnimation" x:Name="ShowAnimation">
+                <DoubleAnimationUsingKeyFrames
+                    Storyboard.TargetName="PopUpTransform"
+                    Storyboard.TargetProperty="Y"
+                    Duration="0:0:01">
+                    <EasingDoubleKeyFrame KeyTime="0:0:01" Value="0">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <!--<CircleEase EasingMode="EaseInOut"/>-->
+                            <ElasticEase EasingMode="EaseInOut" Oscillations="2"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="MainShowAnimation" x:Name="MainShowAnimation">
+                <DoubleAnimationUsingKeyFrames
+                    Storyboard.TargetName="MessageContainer"
+                    Storyboard.TargetProperty="Opacity"
+                    Duration="0:0:01" Completed="MainShowAnimation_Completed">
+                    <EasingDoubleKeyFrame KeyTime="0:0:01" Value="1">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CircleEase EasingMode="EaseInOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="MainHideAnimation" x:Name="MainHideAnimation">
+                <DoubleAnimationUsingKeyFrames
+                    Storyboard.TargetName="MessageContainer"
+                    Storyboard.TargetProperty="Opacity"
+                    Duration="0:0:01" Completed="MainHideAnimation_Completed">
+                    <EasingDoubleKeyFrame KeyTime="0:0:01" Value="0">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CircleEase EasingMode="EaseInOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource LoadingPopup}">
+                <Setter Property="Foreground" Value="White"></Setter>
+            </Style>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
     <Grid x:Name="MessageContainer" Height="{Binding ActualHeight,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" Width="{Binding ActualWidth,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}">
         <Grid Background="Black" Opacity="0.7"/>

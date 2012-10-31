@@ -7,12 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="109" d:DesignWidth="332">
     <UserControl.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="Helvetica Neue LT Std"></Setter>
-            <Setter Property="FontSize" Value="20"></Setter>
-            <Setter Property="Foreground" Value="#FFF3F0e9"></Setter>
-        </Style>
-        <teudu:BoolToVisibleConverter x:Key="boolVisibilityConverter"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="TextBlock" BasedOn="{StaticResource BodyText}" />
+            <teudu:BoolToVisibleConverter x:Key="boolVisibilityConverter"/>
+        </ResourceDictionary>
     </UserControl.Resources>
     <Grid Width="{Binding Width,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}">
         

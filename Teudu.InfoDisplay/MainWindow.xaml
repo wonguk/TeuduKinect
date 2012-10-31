@@ -5,34 +5,34 @@
         Title="Teudu" Height="1080" Width="1920"
         DataContext="{Binding ViewModel, Source={StaticResource loader}}" WindowStyle="None" WindowState="Maximized" ResizeMode="NoResize" Cursor="None">
     <Window.Resources>
-        <teudu:PrettyDateConverter x:Key="dateConverter"/>
-        <teudu:NotifyingDateTime x:Key="notifyingDate"/>
-        <teudu:BoolColorConverter x:Key="boolConverter"/>
-        <teudu:EngagedColorConverter x:Key="engagedConverter"/>
-        <teudu:EngagedSymbolConverter x:Key="symbolConverter"/>
-        <teudu:BoolToOpacityConverter x:Key="opacityConverter"/>
-        <teudu:HandDistanceToOpacityConverter x:Key="handConverter"/>
-        <teudu:BoolToVisibleConverter x:Key="boolVisibleConverter"/>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="Helvetica Neue LT Std"></Setter>
-            <Setter Property="FontSize" Value="20"></Setter>
-            <Setter Property="Foreground" Value="#FFF3F0e9"></Setter>
-        </Style>
+        <ResourceDictionary>
+            <teudu:PrettyDateConverter x:Key="dateConverter"/>
+            <teudu:NotifyingDateTime x:Key="notifyingDate"/>
+            <teudu:BoolColorConverter x:Key="boolConverter"/>
+            <teudu:EngagedColorConverter x:Key="engagedConverter"/>
+            <teudu:EngagedSymbolConverter x:Key="symbolConverter"/>
+            <teudu:BoolToOpacityConverter x:Key="opacityConverter"/>
+            <teudu:HandDistanceToOpacityConverter x:Key="handConverter"/>
+            <teudu:BoolToVisibleConverter x:Key="boolVisibleConverter"/>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Controls/style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
     <Grid Background="{Binding Path=Engaged, Converter={StaticResource engagedConverter}}" Panel.ZIndex="80">
         <Image Source="/Teudu.InfoDisplay;component/Images/Gradient3.png" Panel.ZIndex="5" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <teudu:BoardPagedControl  x:Name="BoardNavigator" Height="1300" Panel.ZIndex="10" Margin="0,0,0,0" />
+        <teudu:BoardPagedControl  x:Name="BoardNavigator" Height="1300" Panel.ZIndex="10" Margin="0,50,0,0" />
         <teudu:GuideControl x:Name="Guide" Height="60" Width="{Binding Width,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" VerticalAlignment="Bottom" Panel.ZIndex="99"/>
-        <TextBlock Text="{Binding Path=OutOfBounds, Converter={StaticResource symbolConverter}, FallbackValue=+, ConverterParameter=true}" Panel.ZIndex="99" VerticalAlignment="Center" FontSize="64" HorizontalAlignment="Center" TextAlignment="Center" Foreground="{Binding Path=OutOfBounds, Converter={StaticResource boolConverter}, FallbackValue=Red, ConverterParameter=true}"/>
+        <TextBlock Style="{StaticResource BodyText}" Text="{Binding Path=OutOfBounds, Converter={StaticResource symbolConverter}, FallbackValue=+, ConverterParameter=true}" Panel.ZIndex="99" VerticalAlignment="Center" FontSize="64" HorizontalAlignment="Center" TextAlignment="Center" Foreground="{Binding Path=OutOfBounds, Converter={StaticResource boolConverter}, FallbackValue=Red, ConverterParameter=true}"/>
         <!--<TextBlock Text="+" Panel.ZIndex="81" VerticalAlignment="Center" FontSize="64" HorizontalAlignment="Center" TextAlignment="Center"/>-->
-        <TextBlock Text="{Binding Source={StaticResource notifyingDate},Path=Now, Converter={StaticResource dateConverter}}" Panel.ZIndex="99" HorizontalAlignment="Right" Margin="0,25,50,0" TextAlignment="Right"/>
+        <TextBlock Style="{StaticResource BodyText}" Text="{Binding Source={StaticResource notifyingDate},Path=Now, Converter={StaticResource dateConverter}}" Panel.ZIndex="99" HorizontalAlignment="Right" Margin="0,25,50,0" TextAlignment="Right"/>
         <teudu:OutOfBoundsControl Panel.ZIndex="99" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="{Binding Path=OutOfBounds, Converter={StaticResource boolVisibleConverter}}"/>
         <teudu:TouchAssistControl Panel.ZIndex="99" VerticalAlignment="Center" HorizontalAlignment="Center" Opacity="{Binding Path=DistanceFromInvisScreen, Converter={StaticResource handConverter}}" Visibility="{Binding Path=NewUserGuidesShowing, Converter={StaticResource boolVisibleConverter}}"/>
         <teudu:HandMovementBoundsControl Panel.ZIndex="99" HorizontalAlignment="Right" Margin="0,60,300,0" VerticalAlignment="Top"/>
         <teudu:HandStatusControl Panel.ZIndex="99" HorizontalAlignment="Right" Margin="0,60,50,0" VerticalAlignment="Top"/>
         <!--<teudu:LoadingPopup x:Name="LoadingContainer" Panel.ZIndex="100" />-->
-        <TextBlock Text="Please stand back a bit so Teudu can see you better." FontSize="32" Foreground="Red" Panel.ZIndex="99" HorizontalAlignment="Center" Margin="0,52,0,0" TextAlignment="Center" Opacity="{Binding Path=TooClose, Converter={StaticResource opacityConverter}}"/>
-        <TextBlock Text="Please step forward to get in range." FontSize="32" Foreground="Red" Panel.ZIndex="99" HorizontalAlignment="Center" Margin="0,52,0,0" TextAlignment="Center" Opacity="{Binding Path=OutOfRange, Converter={StaticResource opacityConverter}}"/>
+        <TextBlock Text="Please stand back a bit so Teudu can see you better." Style="{StaticResource ErrorMessage}" Panel.ZIndex="99" HorizontalAlignment="Center" Margin="0,52,0,0" Opacity="{Binding Path=TooClose, Converter={StaticResource opacityConverter}}" />
+        <TextBlock Text="Please step forward to get in range." Style="{StaticResource ErrorMessage}" Panel.ZIndex="99" Margin="0,52,0,0" TextAlignment="Center" Opacity="{Binding Path=OutOfRange, Converter={StaticResource opacityConverter}}"/>
         <!--<Image Source="/Teudu.InfoDisplay;component/Images/CeilidhImage.png" Panel.ZIndex="80" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="50,0,0,25" Width="300"/>-->
     </Grid>
 </Window>

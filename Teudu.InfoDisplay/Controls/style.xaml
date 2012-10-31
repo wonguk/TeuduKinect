@@ -1,0 +1,74 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TextBlock" x:Key="Generic">
+        <Setter Property="FontFamily" Value="Helvetica Neue LT Std"></Setter>
+    </Style>
+    <Style TargetType="TextBlock" BasedOn="{StaticResource Generic}" x:Key="BodyText" >
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="Foreground" Value="#FFF3F0e9"></Setter>
+    </Style>
+    <Style TargetType="TextBlock" BasedOn="{StaticResource Generic}" x:Key="ErrorMessage" >
+        <Setter Property="FontSize" Value="32" />
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+    <Style TargetType="TextBlock" BasedOn="{StaticResource Generic}" x:Key="BoardTitle">
+        <Setter Property="FontSize" Value="30"></Setter>
+        <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+        <Setter Property="Foreground" Value="#FFF3F0e9"></Setter>
+    </Style>
+    <Style BasedOn="{StaticResource BoardTitle}"
+               TargetType="TextBlock"
+               x:Key="BoardTitleText">
+        <Setter Property="FontSize" Value="90"></Setter>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+    </Style>
+    <Style TargetType="TextBlock" BasedOn="{StaticResource Generic}" x:Key="BoardPaged">
+        <Setter Property="Foreground" Value="#FFF3F0e9"></Setter>
+        <Setter Property="Typography.Capitals" Value="Titling"></Setter>
+        <Setter Property="FontSize" Value="120"></Setter>
+        <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="EventGeneric">
+        <Setter Property="FontFamily" Value="Segoe WP"></Setter>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="EventBoard" BasedOn="{StaticResource EventGeneric}">
+        <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="Foreground" Value="#FFF3F0e9"></Setter>
+    </Style>
+    <Style BasedOn="{StaticResource EventBoard}"
+               TargetType="TextBlock"
+               x:Key="EventBoardTitleText">
+        <Setter Property="Typography.Capitals" Value="Titling"></Setter>
+        <Setter Property="FontFamily" Value="Segoe WP Bold"></Setter>
+        <Setter Property="FontSize" Value="120"></Setter>
+        <Setter Property="Margin" Value="0,0,100,0"></Setter>
+        <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+    </Style>
+    <Style TargetType="TextBlock" BasedOn="{StaticResource EventGeneric}" x:Key="Event">
+        <Setter Property="FontSize" Value="30"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+    </Style>
+    <Style BasedOn="{StaticResource Event}"
+               TargetType="TextBlock"
+               x:Key="EventHappeningTime">
+        <Setter Property="Typography.Capitals" Value="Titling"></Setter>
+        <Setter Property="FontFamily" Value="Segoe WP Bold"></Setter>
+        <Setter Property="Margin" Value="0,-10,0,0"></Setter>
+        <Setter Property="FontSize" Value="40"></Setter>
+        <Setter Property="Foreground" Value="White"></Setter>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="WarningText">
+        <Setter Property="FontSize" Value="28"></Setter>
+        <Setter Property="Foreground" Value="Red"></Setter>
+    </Style>
+    <Style TargetType="TextBlock" x:Key="LoadingPopup" BasedOn="{StaticResource Event}" />
+    <Style BasedOn="{StaticResource LoadingPopup}"
+               TargetType="TextBlock"
+               x:Key="MessageText">
+        <Setter Property="Typography.Capitals" Value="Titling"></Setter>
+        <Setter Property="FontFamily" Value="Segoe WP Bold"></Setter>
+        <Setter Property="Margin" Value="0,-10,0,0"></Setter>
+        <Setter Property="FontSize" Value="40"></Setter>
+    </Style>
+</ResourceDictionary>
