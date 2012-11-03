@@ -16,5 +16,5 @@ C:\Users\Won-Gu\Documents\GitHub\TeuduKinect\Teudu.InfoDisplay\App.xaml
 22-1235661659
 Controls\BoardCrumbs.xaml;Controls\BoardPagedControl.xaml;Controls\BoardTitleControl.xaml;Controls\EventBoard.xaml;Controls\EventControl.xaml;Controls\EventDetailsControl.xaml;Controls\EventSashControl.xaml;Controls\GuideControl.xaml;Controls\HandMovementBoundsControl.xaml;Controls\LoadingPopup.xaml;Controls\HandStatusControl.xaml;Controls\OutOfBoundsControl.xaml;Controls\TouchAssistControl.xaml;MainWindow.xaml;
 
-False
+True
 
