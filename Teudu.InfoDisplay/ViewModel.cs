@@ -214,6 +214,7 @@ namespace Teudu.InfoDisplay
 
                 helpService.UserStateUpdated(user);
             }
+
         }
 
         void kinectService_NewPlayer(object sender, EventArgs e)

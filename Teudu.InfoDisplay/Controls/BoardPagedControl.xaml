@@ -7,15 +7,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
-        <teudu:OffsetNavigatorConverter x:Key="offsetConverter"/>
-        <teudu:SlowedOffsetNavigationConverter x:Key="slowedOffsetConverter"/>
-        <Style TargetType="TextBlock">
-            <Setter Property="Foreground" Value="#FFF3F0e9"></Setter>
-            <Setter Property="Typography.Capitals" Value="Titling"></Setter>
-            <Setter Property="FontFamily" Value="Helvetica Neue LT Std"></Setter>
-            <Setter Property="FontSize" Value="120"></Setter>
-            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
-        </Style>
+        <ResourceDictionary>
+            <teudu:OffsetNavigatorConverter x:Key="offsetConverter"/>
+            <teudu:SlowedOffsetNavigationConverter x:Key="slowedOffsetConverter"/>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
     <Canvas Background="{Binding Background,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" VerticalAlignment="Top">
         <StackPanel Orientation="Vertical" Background="{Binding Background,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}">

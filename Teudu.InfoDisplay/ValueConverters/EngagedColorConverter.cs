@@ -23,10 +23,12 @@ namespace Teudu.InfoDisplay
             }
 
             if (val)
+                //return new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 //return new SolidColorBrush(Color.FromRgb(16,12,68)); //161268 30 12 69 25 12 68
-                return new SolidColorBrush(Color.FromRgb(6, 4, 26));
+                return new SolidColorBrush(Color.FromRgb(11,0x61,0xA4));
             else
-                return new SolidColorBrush(Color.FromRgb(6, 4, 26));//6 4 26
+                //return new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                return new SolidColorBrush(Color.FromRgb(11, 0x61, 0xA4));//6 4 26
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

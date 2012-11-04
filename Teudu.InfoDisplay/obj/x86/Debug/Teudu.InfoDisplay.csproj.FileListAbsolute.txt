@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\bin\Debug\Teudu.InfoDisplay.exe.config
 C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teudu.InfoDisplay.csprojResolveAssemblyReference.cache
 C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Controls\BoardCrumbs.baml
@@ -112,3 +113,7 @@ C:\Users\Won-Gu\Documents\GitHub\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teu
 C:\Users\Won-Gu\Documents\GitHub\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teudu.InfoDisplay.csproj.GenerateResource.Cache
 C:\Users\Won-Gu\Documents\GitHub\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teudu.InfoDisplay.exe.manifest
 C:\Users\Won-Gu\Documents\GitHub\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Teudu.InfoDisplay.application
+=======
+C:\Users\Sumyi\Documents\Teudu\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Controls\style.baml
+>>>>>>> upstream/master
+C:\Users\Won-Gu\Documents\GitHub\TeuduKinect\Teudu.InfoDisplay\obj\x86\Debug\Controls\style.baml

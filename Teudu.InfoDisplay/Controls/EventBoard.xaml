@@ -8,20 +8,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" VerticalAlignment="Top">
     <UserControl.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="Segoe WP"></Setter>
-            <Setter Property="FontSize" Value="20"></Setter>
-            <Setter Property="Foreground" Value="#FFF3F0e9"></Setter>
-        </Style>
-        <Style BasedOn="{StaticResource {x:Type TextBlock}}"
-               TargetType="TextBlock"
-               x:Key="BoardTitleText">
-            <Setter Property="Typography.Capitals" Value="Titling"></Setter>
-            <Setter Property="FontFamily" Value="Segoe WP Bold"></Setter>
-            <Setter Property="FontSize" Value="120"></Setter>
-            <Setter Property="Margin" Value="0,0,100,0"></Setter>
-            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
-        </Style>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
     <Canvas>
         <StackPanel  Margin="50,0,0,0">
