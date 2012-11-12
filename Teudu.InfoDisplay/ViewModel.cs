@@ -484,8 +484,8 @@ namespace Teudu.InfoDisplay
         {
             set 
             {
-                if (EntryY - value + oldGlobalY > (App.Current.MainWindow.ActualHeight / 2 - 250))
-                    globalY = App.Current.MainWindow.ActualHeight / 2 - 250;
+                if (EntryY - value + oldGlobalY > (App.Current.MainWindow.ActualHeight / 2 - 375))
+                    globalY = App.Current.MainWindow.ActualHeight / 2 - 375;
                 else if (EntryY - value + oldGlobalY < (-maxBoardHeight + maxEventHeight))
                     globalY = (-maxBoardHeight +maxEventHeight);
                 else
